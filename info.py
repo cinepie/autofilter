@@ -209,7 +209,7 @@ else:
     ON_HEROKU = False
 # Multiple streaming URLs through Cloudflare
 STREAM_URLS = [
-    "https://royal-wave-71bc.servers8.workers.dev/",
+    "https://server2-tight-butterfly-bb3c.cinepixserver00.workers.dev/",
     "https://your-cloudflare-domain-2.workers.dev/"
 ]
 # Default URL if no specific one is chosen
