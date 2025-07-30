@@ -1,3 +1,7 @@
+# Don't Remove Credit @VJ_Botz
+# Subscribe YouTube Channel For Amazing Bot @Tech_VJ
+# Ask Doubt on telegram @KingVJ01
+
 
 import re
 from os import environ
@@ -7,8 +11,8 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', '24161068'))
-API_HASH = environ.get('API_HASH', '294063699a34d955bdc9a0e3a3e98f97')
+API_ID = int(environ.get('API_ID', '26617321'))
+API_HASH = environ.get('API_HASH', '40daa567bfe70fb71d9727c4a93b6503')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 
@@ -17,15 +21,15 @@ PICS = (environ.get('PICS', 'https://t3.ftcdn.net/jpg/05/23/04/00/360_F_52304005
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7867771802 5488475852 5318059936').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5488475852 5318059936').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002538845725'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002506943014'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002531131851').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002638021400 -1002671899473 -1002607534796 -1002656224546 -1001727315752 -1002603049651 -1002507248656').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
@@ -60,7 +64,7 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://jojix54205:0GtCoMpOVHCjT9sx@mirror.ysg93.mongodb.net/?retryWrites=true&w=majority&appName=mirror")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://neilfaru5:tBkbbuc7MpkuZX6f@neil.mpfkk.mongodb.net/?retryWrites=true&w=majority&appName=neil")
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjclonefilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
@@ -184,6 +188,17 @@ YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998",
 # Online Stream and Download
 STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or False
 
+# Stream Access Control - Only specific users can access streaming
+STREAM_ACCESS_CONTROL = bool(environ.get('STREAM_ACCESS_CONTROL', True)) # Set True to enable stream access control
+STREAM_ACCESS_USERS = [int(user_id) if user_id.isdigit() else user_id for user_id in environ.get('STREAM_ACCESS_USERS', '5488475852').split() if user_id.strip()] # User IDs who can access streaming
+STREAM_ACCESS_MESSAGE = environ.get('STREAM_ACCESS_MESSAGE', '''<b>🚫 স্ট্রিম অ্যাক্সেস সীমিত</b>
+
+<b>দুঃখিত! আপনার স্ট্রিমিং অ্যাক্সেস নেই।</b>
+
+<b>📥 আপনি শুধুমাত্র ফাইল ডাউনলোড করতে পারবেন।</b>
+
+<b>🎯 স্ট্রিমিং অ্যাক্সেস পেতে অ্যাডমিনের সাথে যোগাযোগ করুন।</b>''')
+
 # If Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
 MULTI_CLIENT = False
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
@@ -194,7 +209,7 @@ else:
     ON_HEROKU = False
 # Multiple streaming URLs through Cloudflare
 STREAM_URLS = [
-    "https://telserver-new-round-sun-53a7.cinepixserver00.workers.dev/",
+    "https://royal-wave-71bc.servers8.workers.dev/",
     "https://your-cloudflare-domain-2.workers.dev/"
 ]
 # Default URL if no specific one is chosen
